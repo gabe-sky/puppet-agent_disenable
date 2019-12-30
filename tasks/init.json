@@ -1,0 +1,16 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "input_method": "stdin",
+  "description": "Enable or disable the Puppet agent",
+  "parameters": {
+    "action": {
+      "type": "Enum['enable','disable']",
+      "description": "Whether to enable or disable the agent (required)"
+    },
+    "message": {
+      "type": "Optional[String[1]]",
+      "description": "A message to add after the --disable flag (optional)"
+    }
+  }
+}

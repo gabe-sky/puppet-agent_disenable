@@ -1,0 +1,94 @@
+{
+  "name": "gabe-agent_disenable",
+  "version": "1.0.0",
+  "author": "Gabriel M Schuyler",
+  "summary": "A task to enable or disable the Puppet agent",
+  "license": "Apache-2.0",
+  "source": "https://github.com/gabe-sky/puppet-agent_disenable",
+  "project_page": "https://github.com/gabe-sky/puppet-agent_disenable",
+  "issues_url": "https://github.com/gabe-sky/puppet-agent_disenable/issues",
+  "dependencies": [],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 7.0.0"
+    }
+  ],
+  "tags": [
+    "puppet","agent","enable","disable"
+  ],
+"operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "16.04",
+        "18.04"
+      ]
+    },
+    {
+      "operatingsystem": "Solaris",
+      "operatingsystemrelease": [
+        "11"
+      ]
+    },
+    {
+      "operatingsystem": "AIX",
+      "operatingsystemrelease": [
+        "5.3",
+        "6.1",
+        "7.1"
+      ]
+    },
+    {
+      "operatingsystem": "Amazon",
+      "operatingsystemrelease": [
+        "2016.03",
+        "2016.09",
+        "2017.03",
+        "2017.09",
+        "2018.03"
+      ]
+    },
+    {
+      "operatingsystem": "Raspbian",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "2008 R2",
+        "2012 R2",
+        "10"
+      ]
+    }
+  ]
+}
