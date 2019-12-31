@@ -7,25 +7,24 @@ require 'json'
 require 'open3'
 require 'puppet'
 
-def set(action,message)
-  cmd = ['puppet','agent',"--#{action}"]
-  cmd << "#{message}" if ! message.nil?  # Tack on the message if it's not nil
-  stdout, stderr, status = Open3.capture3(*cmd)
+def set(action, message)
+  cmd = ['puppet', 'agent', "--#{action}"]
+  cmd << message.to_s unless message.nil? # Tack on the message if it's not nil
+  _stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, _("stderr: ' #{stderr}') % { stderr: stderr }") if status != 0
-  { status: stdout.strip }
-  result = { 'result':"Set agent to #{action}" }
+  { result: "Set agent to #{action}" }
 end
 
 params = JSON.parse(STDIN.read)
 action = params['action']
-if ( ! params['message'].nil? ) and params['action'] == 'disable'
-  message = params['message']  # Use whatever was passed to us
+if !params['message'].nil? && params['action'] == 'disable'
+  message = params['message'] # Use whatever was passed to us
 elsif params['action'] == 'disable'
-  message = 'Disabled by agent_disenable task'  # Use a canned message
+  message = 'Disabled by agent_disenable task' # Use a canned message
 end
 
 begin
-  result = set(action,message)
+  result = set(action, message)
   puts result.to_json
   exit 0
 rescue Puppet::Error => e
