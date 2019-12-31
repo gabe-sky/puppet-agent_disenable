@@ -7,17 +7,10 @@
   "source": "https://github.com/gabe-sky/puppet-agent_disenable",
   "project_page": "https://github.com/gabe-sky/puppet-agent_disenable",
   "issues_url": "https://github.com/gabe-sky/puppet-agent_disenable/issues",
-  "dependencies": [],
-  "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": ">= 3.0.0 < 7.0.0"
-    }
+  "dependencies": [
+
   ],
-  "tags": [
-    "puppet","agent","enable","disable"
-  ],
-"operatingsystem_support": [
+  "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
@@ -90,5 +83,20 @@
         "10"
       ]
     }
-  ]
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 7.0.0"
+    }
+  ],
+  "tags": [
+    "puppet",
+    "agent",
+    "enable",
+    "disable"
+  ],
+  "pdk-version": "1.14.1",
+  "template-url": "pdk-default#1.14.1",
+  "template-ref": "1.14.1-0-g0b5b39b"
 }
